@@ -1,0 +1,202 @@
+Here’s an updated version of your LaTeX resume with placeholder names and information. The structure remains the same, but I’ve replaced personal data with generic references. You can update this with specific information as needed.
+
+```latex
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+        {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\classesList}[4]{
+        \item\small{
+            {#1 #2 #3 #4 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+        \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+          \textbf{#1} & \textbf{\small #2} \\
+          \textit{\small#3} & \textit{\small #4} \\
+        \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+        \item
+        \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+          \textit{\small#1} & \textit{\small #2} \\
+        \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+        \item
+        \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+          \small#1 & \textbf{\small }\\
+        \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+        {\Huge \scshape John Doe} \\ \vspace{1pt}
+        \small \raisebox{-0.1\height}\faPhone\ +1 234 567 8901 ~ \href{mailto:johndoe@example.com}{\raisebox{-0.2\height}\faEnvelope\  \ {johndoe@example.com}} ~
+        \href{https://linkedin.com/in/johndoe}{\raisebox{-0.2\height}\faLinkedin\ \ LinkedIn: John Doe}
+        \vspace{-8pt}
+\end{center}
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+        \resumeSubheading
+          {University of Example}{2020 - 2024}
+          {Bachelor of Science in Computer Science (GPA: 3.9)}{City, Country}
+  \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------
+\section{Internships}
+  \resumeSubHeadingListStart
+        \resumeSubheading
+          {Tech Solutions Inc.}{June 2023 - July 2023}
+          {Java Development Intern}{City, Country}
+          \resumeItemListStart
+            \resumeItem{Worked on core Java concepts and developed basic backend systems.}
+            \resumeItem{ \href{https://example.com/certificate}{Java Intern Certificate}}
+          \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+  \resumeSubHeadingListStart
+        \resumeSubheading
+          {Web Development Co.}{March 2024 - July 2024}
+          {MERN Stack Developer}{City, Country}
+          \resumeItemListStart
+            \resumeItem{Developed web applications using MongoDB, Express.js, React, and Node.js.}
+            \resumeItem{Worked on deployment assistance and mock interview prep.}
+          \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects} 
+  \resumeSubHeadingListStart
+        \resumeProjectHeading
+              {\textbf{Authentication System} | \emph{React, Node.js, MongoDB, Express.js}}{}
+              \resumeItemListStart
+                \resumeItem{Developed user authentication with JWT and middleware for route protection.}
+                \resumeItem{\href{https://example.com/project}{Live Project}}
+                \resumeItem{\href{https://github.com/example/auth-system}{GitHub Repository}}
+              \resumeItemListEnd
+
+         \resumeProjectHeading
+              {\textbf{Real-Time Chat Application} | \emph{MERN + Socket.io}}{}
+              \resumeItemListStart
+                \resumeItem{Built a chat app with real-time messaging, user status, and JWT-based authentication.}
+                \resumeItem{\href{https://example.com/chatapp}{Live Project}}
+                \resumeItem{\href{https://github.com/example/chatapp}{GitHub Repository}}
+              \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------CERTIFICATIONS-----------
+\section{Certifications}
+  \resumeSubHeadingListStart
+        \resumeItemListStart
+           \resumeItem{\href{https://example.com/owasp}{OWASP Security Certification}}
+           \resumeItem{\href{https://example.com/mern-cert}{MERN Stack Web Development}}
+        \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+  \resumeSubHeadingListStart
+        \resumeItemListStart
+           \resumeItem{Languages: Java, JavaScript, HTML/CSS, MySQL}
+        \resumeItemListStart
+           \resumeItem{Technologies: React.js, Node.js, Express.js, MongoDB, Redux, REST API, JSON}
+           \resumeItem{Problem-solving and analytical skills}
+        \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------PROFESSIONAL SKILLS-----------
+\section{Professional Skills}
+  \resumeSubHeadingListStart
+        \resumeItemListStart
+           \resumeItem{Event Organizing and Coordination}
+           \resumeItem{Effective Communication}
+        \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+\end{document}
+```
+
+You can now replace the placeholder names (e.g., "John Doe," "University of Example") with actual information when needed. Let me know if you need any further adjustments!
